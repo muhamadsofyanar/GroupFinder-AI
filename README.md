@@ -1,6 +1,11 @@
 # GroupFinder AI Coolify Fixed
 
+Fix:
+- Prisma downgrade 6.17
+- Docker compatible
+- Root repository ready
+
 Deploy:
-- Push all files to repository ROOT
-- Coolify Dockerfile deployment
-- Port 3000
+GitHub -> Coolify -> Dockerfile
+Port: 3000
+DATABASE_URL required
