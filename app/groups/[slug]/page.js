@@ -1,9 +1,11 @@
+export const dynamic = "force-dynamic";
+
 import { prisma } from "../../../lib/prisma";
 
 export default async function Detail({params}){
 
 const group = await prisma.group.findUnique({
- where:{slug:params.slug}
+where:{slug:params.slug}
 });
 
 return (
