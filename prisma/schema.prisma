@@ -7,38 +7,9 @@ datasource db {
  url=env("DATABASE_URL")
 }
 
-model User {
- id Int @id @default(autoincrement())
- name String
- email String @unique
- role String @default("USER")
- plan String @default("FREE")
-}
-
 model Group {
  id Int @id @default(autoincrement())
  name String
- slug String @unique
  platform String
  inviteLink String @unique
- category String
- verified Boolean @default(false)
- featured Boolean @default(false)
- qualityScore Int @default(0)
- views Int @default(0)
- clicks Int @default(0)
-}
-
-model Subscription {
- id Int @id @default(autoincrement())
- userId Int
- provider String
- status String
-}
-
-model AnalyticsEvent {
- id Int @id @default(autoincrement())
- groupId Int
- event String
- createdAt DateTime @default(now())
 }
