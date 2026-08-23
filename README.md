@@ -1,11 +1,23 @@
-# GroupFinder AI Coolify Fixed
+# GroupFinder AI v2.1 Full Coolify Edition
 
-Fix:
-- Prisma downgrade 6.17
-- Docker compatible
-- Root repository ready
+Production starter:
+- Next.js 15
+- Prisma 6
+- PostgreSQL
+- Docker
+- Coolify compatible
+
+Modules:
+- User system
+- Group directory
+- Search API
+- Admin structure
+- AI service structure
+- Crawler worker structure
+- Redis/Meilisearch ready
 
 Deploy:
-GitHub -> Coolify -> Dockerfile
-Port: 3000
-DATABASE_URL required
+1. Upload repository root to GitHub
+2. Coolify -> Dockerfile
+3. Add environment variables
+4. Deploy
