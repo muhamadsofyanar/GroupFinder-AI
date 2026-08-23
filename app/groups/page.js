@@ -5,21 +5,16 @@ export default async function Groups(){
 
 const groups=await prisma.group.findMany();
 
-return(
-<main style={{padding:40}}>
-<h1>Community List</h1>
+return <main style={{padding:40}}>
+<h1>Community Directory</h1>
 
 {groups.map(g=>
 <div key={g.id}>
 <h2>
-<Link href={`/groups/${g.slug}`}>
-{g.name}
-</Link>
+<Link href={`/groups/${g.slug}`}>{g.name}</Link>
 </h2>
-<p>{g.platform} | Score {g.qualityScore}</p>
+<p>{g.platform} | {g.category}</p>
 </div>
 )}
-
 </main>
-)
 }

@@ -1,1 +1,1 @@
-console.log("Crawler worker ready");
+console.log("Crawler ready");

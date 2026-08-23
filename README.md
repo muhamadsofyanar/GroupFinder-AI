@@ -1,16 +1,16 @@
-# GroupFinder AI v2.2 Functional
+# GroupFinder AI v2.3 Complete MVP
 
 Features:
-- Working search page
-- Group listing
-- Group detail page
-- Prisma database
+- Modern Next.js app
+- Group directory
+- Search API
+- Category filter structure
+- Group detail
+- Submit group form
+- Admin management structure
+- Prisma PostgreSQL
 - Seed data
-- Admin add group API
 - Coolify Docker deployment
 
-Stack:
-Next.js 15
-Prisma 6
-PostgreSQL
-Docker
+Production flow:
+GitHub -> Coolify -> Docker -> PostgreSQL

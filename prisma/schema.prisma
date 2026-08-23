@@ -7,6 +7,14 @@ datasource db {
  url=env("DATABASE_URL")
 }
 
+model User {
+ id Int @id @default(autoincrement())
+ name String?
+ email String @unique
+ role String @default("USER")
+ createdAt DateTime @default(now())
+}
+
 model Group {
  id Int @id @default(autoincrement())
  name String
@@ -14,8 +22,20 @@ model Group {
  platform String
  category String
  description String?
+ city String?
  memberCount Int @default(0)
  qualityScore Int @default(0)
  inviteLink String
+ verified Boolean @default(false)
+ status String @default("ACTIVE")
+ createdAt DateTime @default(now())
+}
+
+model Submission {
+ id Int @id @default(autoincrement())
+ name String
+ platform String
+ link String
+ status String @default("PENDING")
  createdAt DateTime @default(now())
 }
